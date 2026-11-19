@@ -1,0 +1,3 @@
+package com.contenthub.domain;
+import jakarta.persistence.*;
+@Entity @Table(name="app_users") public class AppUser{@Id @GeneratedValue(strategy=GenerationType.IDENTITY)private Long id;@Column(nullable=false,unique=true)private String email;@Column(nullable=false)private String password;@Column(nullable=false)private String fullName;@Column(nullable=false)private String role="ADMIN";protected AppUser(){}public AppUser(String e,String p,String n){email=e;password=p;fullName=n;}public Long getId(){return id;}public String getEmail(){return email;}public String getPassword(){return password;}public String getFullName(){return fullName;}public String getRole(){return role;}}
